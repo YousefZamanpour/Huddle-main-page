@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap');
+
+
+
+/* CSS Reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom Properties */
+
+:root{
+
+    /* Colors */
+    --clr-neutral-200:hsl(207, 100%, 98%);
+    --clr-neutral-500:hsl(192, 100%, 9%);
+    --clr-primary-300:hsl(321, 100%, 78%);
+    --clr-primary-400:hsl(322, 100%, 66%);
+    --clr-primary-500:hsl(0, 100%, 63%);
+
+    /* Typography */
+    --ff-heading: 'Poppins', sans-serif;
+    --ff-body: 'Open Sans', sans-serif;
+    --fw-regular:400;
+    --fw-semi:600;
+    --fw-bold:700;
+    --fs-body:1rem;
+    --fs-title: 1.5rem;
+    --fs-heading: 2rem;
+    --fs-stats: 4rem;
+
+}
+
+/* General Styling  */
+
+html{
+  font-family: var(--ff-body);
+}
+
+h1,h2,h3, h4{
+  font-family: var(--ff-heading);
+}
+h4{
+  font-size: var(--fs-title);
+}
+
+.wrapper{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  place-items: center;
+  padding: 1.5rem;
+  text-align: center;
+}
+header{
+  width: 100% ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6rem;
+
+}
+.logo{
+  width: 150px ;
+}
+.try-btn{
+  cursor: pointer;
+  background: transparent;
+  border-radius: 20px;
+  padding: .4rem 1.5rem;
+  border: 1px solid var(--clr-primary-400);
+  color: var(--clr-primary-400);
+}
+
+.try-btn:hover,
+.try-btn:focus{
+  background: var(--clr-primary-400);
+  color: var(--clr-neutral-200);
+  transition: 250ms;
+}
+
+.hero-page{
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+.hero-title{
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-heading);
+  line-height: 2.5rem;
+}
+.hero-page p{
+  font-weight: var(--fw-semi);
+}
+.main-button{
+  cursor: pointer;
+  color: var(--clr-neutral-200);
+  background: var(--clr-primary-400);
+  font-weight: var(--fw-semi);
+  border: none;
+  border-radius: 25px;
+  padding: .7rem 3rem;
+  box-shadow: 0px 3px 5px hsla(0 0 0 / .3);
+}
+.main-button:hover,
+.main-button:focus{
+  background: var(--clr-primary-300);
+  transition: 250ms;
+}
+.stats{
+  display: grid;
+  gap: 5rem;
+  margin-block: 7rem;
+}
+.amount{
+ font-weight: var(--fw-bold);
+ font-size: var(--fs-stats);
+}
+span:not([class]){
+  color: var(--clr-neutral-500);
+  opacity: .5;
+}
+.grow{
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 4rem;
+  color: var(--clr-neutral-500);
+  margin-block-end: 7rem;
+}
+.grow >div{
+  display: grid;
+  gap: 1rem;
+}
+
+.flow{
+  display: grid;
+  gap: 4rem;
+  margin-block-end: 7rem;
+}
+.flow >div{
+  display: grid;
+  gap: 1rem;
+}
+
+.users{
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 4rem;
+  color: var(--clr-neutral-500);
+  margin-block-end: 7rem;
+}
+
+.ready{
+  display: grid;
+  gap: 2.2rem;
+  margin-block: 5rem;
+}
+.bg-pattern{
+  width: 100%;
+}
+footer{
+  background: var(--clr-neutral-500);
+  color: var(--clr-neutral-200);
+  width: 100%;
+  padding: 4rem 2rem ;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 3rem;
+}
+
+.newsletter{
+  display: grid;
+  gap: 1.5rem;
+}
+input{
+  border-radius: 5px;
+  border: none;
+  padding: .6rem 1rem;
+}
+.subscribe{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+.sub{
+  place-self: flex-end;
+}
+.sub-btn{
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-200);
+  font-weight: var(--fw-semi);
+  padding: .4rem 2rem;
+}
+.sub-btn:hover,
+.sub-btn:focus{
+  background: var(--clr-primary-300);
+  transition: 250ms;
+}
+
+.socials{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.footer-logo{
+  filter: brightness(10);
+  
+}
+.contact-info{
+  display: grid;
+  gap: 1rem;
+  margin-block: 2rem ;
+}
+
+.phone{
+  display: flex;
+  gap: 1.5rem
+}
+.mail{
+  display: flex;
+  gap: 1.5rem
+}
+.social-icons{
+  display: flex;
+  gap: 1.5rem;
+}
+
+
+@media(min-width: 700px){
+  .wrapper{
+    padding-inline: 4rem ;
+  }
+  header{
+    margin-bottom: 15rem;
+  }
+  .hero-page{
+    text-align: center;
+    max-width: 75ch;
+  }
+
+  .stats{
+    display: flex;
+    flex-direction: row;
+    gap: 25rem ;
+  }
+  .grow{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+    text-align: left;
+  }
+  .grow p, .flow p, .users p{
+    max-width: 60ch;
+  }
+  .flow{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: center;
+    text-align: left;
+  }
+  .flow-text{
+    justify-self: flex-end;
+  }
+  .users{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+    text-align: left;
+  }
+
+  footer{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .newsletter{
+    max-width: 400px;
+  }
+  .subscribe{
+    display: flex;
+    flex-direction: row;
+    place-self: flex-start;
+    align-items: center;
+}
+.socials{
+  max-width: 400px;
+}
+}
